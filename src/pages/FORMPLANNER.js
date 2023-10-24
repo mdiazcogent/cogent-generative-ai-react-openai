@@ -160,7 +160,7 @@ class FormPlanner extends React.Component {
 
   callGPT4API = async (prompt) => {
     const API_ENDPOINT = 'https://api.openai.com/v1/chat/completions'; // Update to chat/completions endpoint
-    const API_KEY = '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'; // Replace with your API key
+    const API_KEY = 'your API KEY here'; // Replace with your API key
 
     const headers = {
         'Authorization': `Bearer ${API_KEY}`,
