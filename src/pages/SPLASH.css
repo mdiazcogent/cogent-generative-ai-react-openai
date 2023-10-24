@@ -1,50 +1,95 @@
 .splash-backgroundmask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #fffbfc;
-    width: 25.88rem;
-    height: 100%;
-  }
-  .bg-icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 43.13rem;
-    height: 72.67rem;
-    opacity: 0.7;
-    mix-blend-mode: normal;
-  }
-  .layer-2-icon {
-    position: absolute;
-    height: 7.14%;
-    width: 71.01%;
-    top: 35.49%;
-    right: 14.49%;
-    bottom: 57.37%;
-    left: 14.49%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-  }
-  .situated-in-purwokerto {
-    position: absolute;
-    top: calc(50% - 41px);
-    left: calc(50% - 145px);
-    line-height: 1.5rem;
-    display: inline-block;
-    width: 18.06rem;
-  }
-  .splash {
-    position: relative;
-    background-color: #fff;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    cursor: pointer;
-    text-align: center;
-    font-size: 1rem;
-    color: #0d2261;
-    font-family: var(--font-dm-sans);
-  }
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fffbfc;
+  width: 25.88rem;
+  height: 56rem;
+}
+.bg-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 43.13rem;
+  height: 72.67rem;
+  opacity: 0.7;
+  mix-blend-mode: normal;
+}
+.layer-2-icon {
+  position: absolute;
+  height: 7.14%;
+  width: 71.01%;
+  top: 35.49%;
+  right: 14.49%;
+  bottom: 57.37%;
+  left: 14.49%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.situated-in-purwokerto {
+  position: absolute;
+  top: calc(50% - 41px);
+  left: calc(50% - 145px);
+  line-height: 1.5rem;
+  display: inline-block;
+  width: 18.06rem;
+}
+.splash {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 56rem;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  color: #0d2261;
+  font-family: "DM Sans";
+}
+
+/* SPLASH.css */
+
+/* ... your existing styles ... */
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* SPLASH.css */
+
+/* ... existing styles ... */
+
+.text-with-spinner {
+  position: relative; /* Set a positioning context for its children */
+  align-self: center; /* Center the container if the parent uses display: flex */
+  text-align: center; /* Center the text horizontally */
+}
+
+.text-content {
+  position: absolute; /* Positioning related to its closest positioned ancestor */
+  top: 0;
+  left: 0;
+  z-index: 2; /* Above the spinner */
+  width: 100%; /* Occupy the full width of its parent */
+}
+
+.spinner {
+  position: absolute; /* Positioning related to its closest positioned ancestor */
+  top: 60%; 
+  left: 40%;
+  transform: translate(-50%, -50%); /* Center the spinner in its parent */
+  z-index: 1; /* Below the text */
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #E65506; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-top: 20px; /* Some space between the text and spinner */
+  align-self: center; /* Center the spinner if the parent uses display: flex */
+  /* ... existing spinner styles ... */
+}
+

@@ -8,8 +8,8 @@ import {
 import FORMPLANNER from "./pages/FORMPLANNER";
 
 // Step 1: Import the new pages
-import splash from "./pages/SPLASH";
-import results from "./pages/PLANNERRESULTS";
+import SPLASH from "./pages/SPLASH";
+import PLANNERRESULTS from "./pages/PLANNERRESULTS";
 //... import other pages as needed
 
 function App() {
@@ -59,10 +59,10 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<FORMPLANNER />} />
+      <Route path="/" element={< SPLASH />} />
       {/* Step 2: Add Route components for the new pages */}
-      <Route path="/splash" element={<splash />} />
-      <Route path="/results" element={<results />} />
+      <Route path="/planner" element={<FORMPLANNER />} />
+      <Route path="/results" element={<PLANNERRESULTS />} />
       {/*... add routes for other pages as needed */}
     </Routes>
   );
